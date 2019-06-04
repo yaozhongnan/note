@@ -84,8 +84,6 @@ err.message // "出错了"
 + `URIError`对象是 URI 相关函数的参数不正确时抛出的错误，主要涉及`encodeURI()`、`decodeURI()`、`encodeURIComponent()`、`decodeURIComponent()`、`escape()`和`unescape()`这六个函数。
 + `eval`函数没有被正确执行时，会抛出`EvalError`错误。该错误类型已经不再使用了，只是为了保证与以前代码兼容，才继续保留。
 
-## Array 对象
-
 
 
 ## ES6 知识点
@@ -117,9 +115,8 @@ err.message // "出错了"
 + cloneNode(boolean)，传入 true 表示深克隆，false 浅克隆
 + normalize()
 
-## 进阶
 
-### apply()、call() 和 bind()
+## apply()、call() 和 bind()
 
 每个函数都有两个非继承而来的方法，apply() 和 call()，这两个方法的作用都是**在特定的作用域中调用函数**。
 
@@ -145,7 +142,7 @@ call() 方法接收 n 个参数， 第一个是在其中运行函数的作用域
 
 bind() 这个方法会创建一个函数的实例，其 this 值会被绑定到传给 bind() 函数的值。 
 
-### 创建对象的几种方式
+## 创建对象的几种方式
 
 常见的创建对象的几种方式：
 
@@ -205,7 +202,7 @@ Person.prototype.sayHi = function () {
 + 寄生构造函数模式
 + 稳妥构造函数模式
 
-### 原型
+## 原型
 
 原型：每当我们创建一个新函数，这个函数就会创建一个 prototype 属性，这个属性是一个指针，指向一个对象，就是函数的原型对象。
 
@@ -260,7 +257,7 @@ console.log(p1.hasOwnProperty('name'))	// true
 console.log(p1.hasOwnProperty('age'))	// false
 ```
 
-#### in 
+### in 
 
 使用 in 操作符也可以检测一个属性是否存在与一个对象中，但它不能检测出该属性在实例中还是原型中，因为但凡两者中有一个存在该属性，那么它就返回 true。例：
 
@@ -279,21 +276,21 @@ console.log('age' in p1)	// true
 
 可以结合 in 操作符和 hasOwnProperty() 方法判断一个属性到底是存在与对象中，还是原型中。
 
-#### for in
+### for in
 
 使用 for in 循环时，返回的是所有能够通过对象访问的、可枚举的（enumerated）属性。其中既包括存在与实例中的属性也包括存在与原型中的属性。
 
-#### Object.keys()
+### Object.keys()
 
 使用 Object.keys() ，传入一个对象，返回一个包含该对象所有可枚举属性的字符串数组。
 
-#### Object.getOwnPropertyNames()
+### Object.getOwnPropertyNames()
 
 Object.getOwnPropertyNames()，传入一个对象，返回所有属性，无论是否可枚举。
 
-### 继承
+## 继承
 
-#### 原型链实现继承
+### 原型链实现继承
 
 ES5 将原型链作为实现继承的主要方法。基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。
 
@@ -322,7 +319,7 @@ console.log(instance);
 console.log(instance.getSuperValue()); //true
 ```
 
-##### 确定原型和实例的关系
+#### 确定原型和实例的关系
 
 方式一： instanceof 操作符
 
@@ -340,17 +337,17 @@ console.log(SuperType.prototype.isPrototypeOf(instance))		// true
 console.log(SubType.prototype.isPrototypeOf(instance))			// true
 ```
 
-##### 谨慎的定义方法
+#### 谨慎的定义方法
 
 子类型有时候需要重写超类型中的某个方法，或者需要添加超类型中不存在的某个方法。但不管怎 样，给原型添加方法的代码一定要放在替换原型的语句之后。 
 
-##### 原型链的问题
+#### 原型链的问题
 
 问题一：包含引用类型值的原型。
 
 问题二：不能向超类型的构造函数中传递参数。
 
-#### 借用构造函数实现继承（经典继承）
+### 借用构造函数实现继承（经典继承）
 
 ```js
 function SuperType(){
@@ -390,7 +387,7 @@ function SubType(){
 
 如果仅仅是借用构造函数，那么也将无法避免构造函数模式存在的问题——方法都在构造函数中定 义，因此函数复用就无从谈起了。而且，在超类型的原型中定义的方法，对子类型而言也是不可见的，结 果所有类型都只能使用构造函数模式。考虑到这些问题，借用构造函数的技术也是很少单独使用的。 
 
-#### 组合继承（伪经典继承）
+### 组合继承（伪经典继承）
 
 组合继承（combination inheritance），有时候也叫做伪经典继承，指的是将原型链和借用构造函数的 技术组合到一块，从而发挥二者之长的一种继承模式。其背后的思路是使用原型链实现对原型属性和方 法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数 复用，又能够保证每个实例都有它自己的属性。下面来看一个例子。 
 
@@ -427,9 +424,9 @@ instance2.sayAge(); //27
 
 组合继承避免了原型链和借用构造函数的缺陷，融合了它们的优点，成为 JavaScript 中最常用的继 承模式。而且，instanceof 和 isPrototypeOf()也能够用于识别基于组合继承创建的对象。 
 
-### 深浅拷贝
+## 深浅拷贝
 
-#### 浅拷贝
+### 浅拷贝
 
 复制一个对象，但复制的对象属性中不能是引用类型值的属性
 
@@ -458,7 +455,7 @@ console.log(obj2);
 console.log(obj);
 ```
 
-#### 深拷贝
+### 深拷贝
 
 多复杂的对象都可以拷贝，且引用类型值的属性也没关系，且互不影响
 
@@ -508,13 +505,13 @@ deepCopy(obj, obj2)
 
 
 
-### 堆和栈
+## 堆和栈
 
 栈：先进先出
 
 堆：后进先出
 
-### 执行环境及作用域
+## 执行环境及作用域
 
 执行环境定义了变量或函数有权访问的其它数据，决定了它们各自的行为。
 
@@ -528,7 +525,7 @@ deepCopy(obj, obj2)
 
 标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程始终从作用域链的前端开始， 然后逐级地向后回溯，直至找到标识符为止（如果找不到标识符，通常会导致错误发生）。 
 
-#### 执行上下文栈
+### 执行上下文栈
 
 1、在全局代码执行前，JS 引擎就会创建一个栈来存储管理所有的执行上下文对象
 
@@ -542,7 +539,7 @@ deepCopy(obj, obj2)
 
 注：栈的底部只可能是 window
 
-### 闭包
+## 闭包
 
 闭包是指有权访问另一个函数作用域中的变量的**函数**
 
@@ -597,30 +594,60 @@ function assignHandler(){
 } 
 ```
 
-### 事件流
+## 事件流
 
 事件流描述的是从页面中接收事件的顺序。
 
-#### 事件冒泡
+### 事件冒泡
 
 IE 的事件流叫做事件冒泡（从里向外，div => body => html => Document）
 
-#### 事件捕获
+### 事件捕获
 
 网景的事件流叫做事件捕获（从外向里，Dodument => html => body => div）
 
-#### DOM 事件流
+### DOM 事件流
 
 “DOM2级事件”规定的事件流包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段 。首 先发生的是事件捕获，为截获事件提供了机会。然后是实际的目标接收到事件。最后一个阶段是冒泡阶段。
 
 即 Dodument => html => body => div => body => html => Document
 
-### 垃圾收集
+## target 和 currentTarget 的区别
+
+当注册一个事件处理程序的时候，例：
+
+```js
+element.onclick = function (e) {
+    console.log(e.target);
+    console.log(e.currentTarget);
+}
+```
+
+事件对象的 target 和 currentTarget 属性有什么区别的？
+
+target 是你点的那个 DOM 元素。
+
+currentTarget 始终与事件处理函数中的 this 相同。
+
+```html
+<!-- 在 div 上点击和在 btn 上点击，看看 console 的结果有什么变化 -->
+<div id="div" style="width: 100px;height: 100px;background: red;">
+    <button>btn</button>
+</div>
+<script>
+    div.onclick = function(e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+    }
+</script>
+```
+
+## 垃圾收集
 
 + 标记清除
 + 引用计数
 
-### 内存泄漏与内存溢出
+## 内存泄漏与内存溢出
 
 内存泄漏：
 
@@ -628,37 +655,29 @@ IE 的事件流叫做事件冒泡（从里向外，div => body => html => Docume
 
 内存泄漏积累的多了就容易导致内存溢出
 
-#### 哪些操作会造成内存泄漏
+### 哪些操作会造成内存泄漏
 
 + 意外的全局变量
 
-![](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2262097129,4197717905&fm=173&app=25&f=JPEG?w=390&h=62 )
-
-+ 闭包引起的内存泄漏
-
-![](https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=604424390,2416475205&fm=173&app=25&f=JPEG?w=382&h=114&s=CED2CD1A87F45C221E4408DE000010B2 )
++ 闭包引起的内存泄漏 
 
 + 没有清理的DOM元素引用 
 
-![](https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=209075,4008381855&fm=173&app=25&f=JPEG?w=510&h=242&s=4D42EC1A1D4A55495C7500DB0000C0B2 )
-
 + 被遗忘的定时器或者回调 
 
-![](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=372941860,2834490686&fm=173&app=25&f=JPEG?w=436&h=136&s=ED50EC1A93704C2004D41DDA0000D0B2 )
-
-#### 怎样避免内存泄漏
+### 怎样避免内存泄漏
 
 + 减少不必要的全局变量，或者生命周期较长的对象，及时对无用的数据进行垃圾回收； 
 + 注意程序逻辑，避免“死循环”之类的 ； 
 + 避免创建过多的对象 原则：不用了的东西要及时归还。 
 
-#### 内存溢出
+### 内存溢出
 
 一种程序运行出现的错误
 
 当程序运行需要的内存超过了剩余的内存时，就会抛出内存溢出的错误
 
-### 进程和线程
+## 进程和线程
 
 进程
 
