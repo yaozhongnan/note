@@ -89,7 +89,7 @@ for (let key in div) {
 
 
 
-![](E:\yzn\markdown\images\react\react 同层比较.png)
+![](.\images\react\react 同层比较.png)
 
 
 
@@ -163,7 +163,7 @@ for (let key in div) {
 
 
 
-![](E:\yzn\markdown\images\react\element tree1.png)
+![](.\images\react\element tree1.png)
 
 
 
@@ -181,7 +181,7 @@ for (let key in div) {
 
 
 
-![](E:\yzn\markdown\images\react\element tree2.png)
+![](.\images\react\element tree2.png)
 
 
 
