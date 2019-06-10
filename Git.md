@@ -42,6 +42,14 @@ git checkout -b 分支名称
 
 
 
+合并分支（在需要合并的分支下发起合并）
+
+```powershell
+git mearge 分支名称
+```
+
+
+
 更新某分支上的代码到当前分支
 
 ```powershell
