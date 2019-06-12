@@ -245,6 +245,20 @@ class ErrorBoundary extends React.Component {ffmpegffmpeg
 </ErrorBoundary>
 ```
 
+
+
+## 事件委托
+
+react 内部帮助我们完成了事件委托，因此我们可以像下面这样绑定事件
+
+```jsx
+{lis.map(li => {
+    return <li key={li.id} onClick={this.handleClick}>{li.text}</li>
+})}
+```
+
+
+
 ### 错误边界放到哪里
 
 错误边界的粒度是由你决定。你可以将其包装在最顶层的路由组件显示给用户”有东西出错”消息，就像服务端框架经常处理崩溃一样。你也可以将单独的插件包装在错误边界内以保护应用其他部分不崩溃。

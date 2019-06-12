@@ -218,7 +218,7 @@ module.exports = {
         // 配置模块对应的规则，它是一个数组，代表可以配置很多规则
         rules: [
             // 配置一个解析 css 模块的规则
-            { test: '/\.css$/', use: ['style-loader', 'css-loader'] }
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] }
         ]
     }
 };
@@ -229,7 +229,7 @@ module.exports = {
 ```js
 rules: [
     // 配置一个解析 less 模块的规则
-    { test: '/\.less$/', use: ['style-loader', 'css-loader', 'less-loader'] }
+    { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }
 ]
 ```
 
@@ -265,9 +265,9 @@ module.exports = {
 ```js
 rules: [
     // 配置一个解析 css 模块的规则
-    { test: '/\.css$/', use: [MiniCssExtractPlugin.loader, 'css-loader'] }，
+    { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] }，
     // 配置一个解析 less 模块的规则
-    { test: '/\.less$/', use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] }
+    { test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] }
 ]
 ```
 
@@ -288,9 +288,9 @@ npm i postcss-loader autoprefixer -D
 ```js
 rules: [
     // 配置一个解析 css 模块的规则
-    { test: '/\.css$/', use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] }，
+    { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] }，
     // 配置一个解析 less 模块的规则
-    { test: '/\.less$/', use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'] }
+    { test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'] }
 ]
 ```
 
@@ -359,7 +359,7 @@ module.exports = {
                 // 是否缓存
                 cache: true,
                 // 是否并发打包
-                paraller: true,
+                parallel: 4,
                 // 源码映射，方便调试
                 sourceMap: true
             }),
@@ -389,7 +389,7 @@ npm i babel-loader @babel/core @babel/preset-env -D
 module.exports = {
     module: {
         rules: [
-            { test: '/\.js$/', use: {
+            { test: /\.js$/, use: {
                 loader: 'babel-loader',
                 options: {
                     presets: [
@@ -420,7 +420,7 @@ npm i @babel/plugin-proposal-class-properties -D
 module.exports = {
     module: {
         rules: [
-            { test: '/\.js$/', use: {
+            { test: /\.js$/, use: {
                 loader: 'babel-loader',
                 options: {
                     presets: [
@@ -454,7 +454,7 @@ npm i @babel/plugin-proposal-decorators -D
 module.exports = {
     module: {
         rules: [
-            { test: '/\.js$/', use: {
+            { test: /\.js$/, use: {
                 loader: 'babel-loader',
                 options: {
                     presets: [
@@ -493,7 +493,7 @@ npm i @babel/runtime -S
 module.exports = {
     module: {
         rules: [
-            { test: '/\.js$/', use: {
+            { test: /\.js$/, use: {
                 loader: 'babel-loader',
                 options: {
                     presets: [
@@ -518,7 +518,7 @@ module.exports = {
     module: {
         rules: [
             { 
-                test: '/\.js$/', 
+                test: /\.js$/, 
                 use: {
                 	loader: 'babel-loader',
                 	options: {
