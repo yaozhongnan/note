@@ -66,7 +66,7 @@ git push origin --delete 远程分支名称
 
 
 
-更新远程仓库代码到本地
+更新远程仓库代码到本地，但不会合并
 
 ```powershell
 git fetch origin
