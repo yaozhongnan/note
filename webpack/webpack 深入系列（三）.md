@@ -405,7 +405,128 @@ hook.promise('yzn', ).then(() => {
 
 
 
+## AsyncSeriesHook
 
+异步串行钩子，特点是注册的异步函数一个一个执行
+
+需求场景：先学习 node，再学习 react（异步）
+
+模拟实现
+
+```js
+class AsyncSeriesHook {
+  constructor(args) {
+    this.tasks = [];
+  }
+ 
+  tapAsync(name, task) {
+    this.tasks.push(task);
+  }
+
+  callAsync(...args) {
+    // 取出最终的回调函数，在参数最后一位
+    const finalCallBack = args.pop();
+    // 维护一个索引
+    let index = 0;
+
+    // 定义一个 next 方法
+    const next = () => {
+      // 判断递归的终点
+      if (this.tasks.length === index) {
+        // 调用最终回调函数
+        return finalCallBack();
+      }
+      // 执行每一次的任务，next 作为 callback
+      this.tasks[index++](...args, next);
+    };
+    next();
+  }
+}
+
+
+
+```
+
+使用
+
+```js
+const hook = new AsyncSeriesHook();
+
+hook.tapAsync("node", (name, cb) => {
+  // setTimeout 模拟异步
+  setTimeout(() => {
+    console.log("学习 node", name);
+    // 任务完成后手动调用 cb，这里的 cb 就是 next 函数
+    cb();
+  }, 1000);
+});
+hook.tapAsync("react", (name, cb) => {
+  setTimeout(() => {
+    console.log("学习 react", name);
+    cb();
+  }, 2000);
+});
+
+hook.callAsync("yzn", () => {
+  console.log("学习完成");
+});
+```
+
+输出
+
+```js
+学习 node yzn		// 一秒后打印
+学习 react yzn	// 两秒后打印
+学习完成		  // 异步函数都执行完成后打印	
+```
+
+使用 Promise 模拟实现
+
+```js
+class AsyncSeriesHook {
+  constructor(args) {
+    this.tasks = [];
+  }
+
+  tapPromise(name, task) {
+    this.tasks.push(task);
+  }
+
+  promise(...args) {
+    const [first, ...others] = this.tasks;
+    return others.reduce((promise, next) => {
+      return promise.then(() => next(...args));
+    }, first(...args));
+  }
+}
+```
+
+使用
+
+```js
+const hook = new AsyncSeriesHook();
+
+hook.tapPromise("node", name => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("学习 node", name);
+      resolve();
+    }, 1000);
+  });
+});
+hook.tapPromise("react", name => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("学习 react", name);
+      resolve();
+    }, 1000);
+  });
+});
+
+hook.promise("yzn").then(() => {
+  console.log("学习完成");
+});
+```
 
 
 
