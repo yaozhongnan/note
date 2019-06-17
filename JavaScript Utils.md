@@ -352,3 +352,16 @@ function getBoundingClientRect(element) {
 }
 ```
 
+## 获取元素的宽高
+
+```js
+// 参数一：要获取的元素 Dom
+// 参数二：布尔值，是否要加上边框
+function getElementSize(element, border) {
+    return {
+        width: border ? element.offsetWidth : element.clientWidth,
+        height: border ? element.offsetHeight : element.clientHeight
+    }
+}
+```
+
