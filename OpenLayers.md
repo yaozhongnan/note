@@ -50,11 +50,16 @@ map.on('singleclick', (e) => {
 
 ## ol.layer.Vector
 
-```js
-
-```
-
-
+- brightness，亮度，默认为 `0` ；
+- contrast，对比度，默认为 `1` ；
+- hue，色调，默认为`0` ；
+- opacity，透明度，默认为 `1` ，即完全透明；
+- saturation，饱和度，默认为 `1` ；
+- source，图层的来源，如果在构造函数中没有传入相应的参数，可以调用 `ol.layer.Layer#setSource`方法来设置来源： `layer.setSource(source)` ；
+- visible，是否可见，默认为 `true` ；
+- extent，图层渲染的区域，即浏览器窗口中可见的地图区域。extent 是一个矩形范围，格式是`[number, number, number, number]` 分别代表 `[left, bottom, right, top]` 。如果没有设置该参数，图层就不会显示；
+- minResolution，图层可见的最小分辨率，当图层的缩放级别小于这个分辨率时，图层就会隐藏；
+- maxResolution，图层可见的最大分辨率，当图层的缩放级别等于或超过这个分辨率时，图层就会隐藏。
 
 
 
