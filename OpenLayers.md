@@ -44,6 +44,16 @@ const map = new Map({
 map.on('singleclick', (e) => {
     
 });
+
+// moveend 事件，当地图 zoom 改变时触发
+map.on('moveend', (e) => {
+    // 该事件存在 bug，就是当拖动地图停下的时候也会触发事件
+});
+
+// 为了防止 moveend 事件的 bug，可以使用下面的方式
+map.getView().on('change:resolution', e => {
+    console.log(e.target.getZoom());
+});
 ```
 
 
