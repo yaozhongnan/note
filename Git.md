@@ -42,6 +42,14 @@ git checkout -b 分支名称
 
 
 
+拉取远端分支到本地
+
+```powershell
+git checkout -b 远端分支名 origin/远端分支名
+```
+
+
+
 合并分支（在需要合并的分支下发起合并）
 
 ```powershell
