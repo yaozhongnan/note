@@ -102,7 +102,6 @@ import moment from 'moment'
 Vue.filter('dataFormat', function(datastr, pattern = "YYYY-MM-DD HH:mm:ss"){
     return moment(datastr).format(pattern);
 })
-// 使用方法： {{ time | dataFormat }}
 ```
 
 官方网站： http://momentjs.cn/
@@ -142,7 +141,7 @@ npm install babel-plugin-transform-remove-strict-mode
 
 **.babelrc**
 
-```
+```shell
 {
   "plugins": ["transform-remove-strict-mode"]
 }
@@ -150,13 +149,13 @@ npm install babel-plugin-transform-remove-strict-mode
 
 **Via CLI**
 
-```
+```shell
 $ babel --plugins transform-remove-strict-mode script.js
 ```
 
 **Via Node API**
 
-```
+```shell
 require("babel-core").transform("code", {
   plugins: ["transform-remove-strict-mode"]
 });
@@ -399,7 +398,7 @@ var vm = new Vue({
 
 1 - 安装：
 
-```
+```shell
 npm install vuex --save
 ```
 
@@ -544,44 +543,4 @@ git remote add origin https://gitee.com/zahirah/vue-app.git
     font-style: normal ;   /* 设置斜体为正常 */ 
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

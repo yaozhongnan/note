@@ -486,7 +486,7 @@ $ git stash pop
 
 ## 其他
 
-```
+```shell
 # 生成一个可供发布的压缩包
 $ git archive
 ```

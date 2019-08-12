@@ -2,9 +2,9 @@
 
 ## 环境变量的配置
 
-![](E:\yzn\markdown\images\java\环境变量01.png)
+![](..\images\java\环境变量01.png)
 
-![](E:\yzn\markdown\images\java\环境变量02.png)
+![](..\images\java\环境变量02.png)
 
 
 

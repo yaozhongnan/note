@@ -2,7 +2,7 @@
 
 ## React Navigation
 
-[官网]: https://reactnavigation.org/docs/en/getting-started.html
+官网： https://reactnavigation.org/docs/en/getting-started.html
 
 ### Getting started
 
@@ -47,7 +47,7 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View>
         <Text>Home Screen</Text>
          {/* 点击这个按钮会跳转到 Home 页面 */}
         <Button
@@ -64,7 +64,7 @@ class HomeScreen extends React.Component {
 class DetailsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View>
         <Text>Details Screen</Text>
          {/* 在 Details 页面中放置了一个按钮，该按钮的作用是点击仍然跳转到 Details 页面，也就是自身。那么在自身跳转到自身会怎么样呢？*/}
          {/* 如果调用 navigate 方法调转到自身页面，则什么事情都不会发生，因为已经在本页面了 */}
