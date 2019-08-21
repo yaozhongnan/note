@@ -1,10 +1,10 @@
 ## Introduction
 
-前端笔记，[在线阅读](https://yaozhongnan.github.io/note/)
+前端笔记，[GitBook 在线阅读](https://yaozhongnan.github.io/note/)
 
 Github：<https://github.com/yaozhongnan/note>
 
-## 文章推荐
+## 其它阅读
 
 + [「2019 JSConf.Asia - 尤雨溪」在框架设计中寻求平衡](<https://zhuanlan.zhihu.com/p/76622839>)
 + [再看2019大前端技术趋势，Web OS概念正落地](<https://developer.aliyun.com/article/711504>)
@@ -20,9 +20,9 @@ Github：<https://github.com/yaozhongnan/note>
 + HTTP
   + [ 为什么我们要熟悉这些通信协议？ 【精读】](<https://segmentfault.com/a/1190000019891825>)
 + 博客
-  	+ [冴羽](https://github.com/mqyqingfeng/Blog)
-    + [前端瓶子君](https://github.com/sisterAn/blog)
-    + [ICSS，不止于 CSS](https://github.com/chokcoco/iCSS)
+  + [冴羽](https://github.com/mqyqingfeng/Blog)
+  + [前端瓶子君](https://github.com/sisterAn/blog)
+  + [ICSS，不止于 CSS](https://github.com/chokcoco/iCSS)
 
 ## commit
 

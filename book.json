@@ -1,0 +1,34 @@
+{
+  "title": "note",
+  "author": "yaozhongnan",
+  "description": "a study note for myself",
+  "language": "zh-hans",
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro",
+    "back-to-top-button",
+    "expandable-chapters-small",
+    "insert-logo",
+    "chapter-fold",
+    "code",
+    "github",
+    "advanced-emoji",
+    "splitter",
+    "page-toc-button",
+    "pageview-count",
+    "popup"
+  ],
+  "pluginsConfig": {
+    "insert-logo": {
+      "url": "images/logo.jpg",
+      "style": "background: none; max-height: 30px; min-height: 30px"
+    },
+    "github": {
+      "url": "https://github.com/yaozhongnan/note"
+    }
+  }
+}
