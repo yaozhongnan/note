@@ -10,25 +10,35 @@
     "-lunr",
     "-search",
     "search-pro",
-    "back-to-top-button",
-    "expandable-chapters-small",
     "insert-logo",
     "chapter-fold",
     "code",
     "github",
     "advanced-emoji",
     "splitter",
-    "page-toc-button",
+    "ancre-navigation",
     "pageview-count",
-    "popup"
+    "popup",
+	"hide-element",
+	"custom-favicon",
+	"tbfed-pagefooter"
   ],
   "pluginsConfig": {
     "insert-logo": {
-      "url": "images/logo.jpg",
+      "url": "/images/logo.jpg",
       "style": "background: none; max-height: 30px; min-height: 30px"
     },
     "github": {
       "url": "https://github.com/yaozhongnan/note"
-    }
+    },
+	"hide-element": {
+		"elements": [".gitbook-link"]
+	},
+	"favicon": "/images/favicon.ico",
+	"tbfed-pagefooter": {
+		"copyright":"Copyright © yaozhongnan All Right Reserved ",
+		"modify_label": "该文章修订时间：",
+		"modify_format": "YYYY-MM-DD HH:mm:ss"
+	}
   }
 }

@@ -21,14 +21,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
                 
             
@@ -49,11 +41,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -563,7 +559,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="react-diff-&#x7B97;&#x6CD5;">React Diff &#x7B97;&#x6CD5;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#react-diff-&#x7B97;&#x6CD5;"><b></b>React Diff &#x7B97;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree-diff"><b></b>&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree diff</a></li><li><span class="title-icon "></span><a href="#&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component-diff"><b></b>&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component diff</a></li><li><span class="title-icon "></span><a href="#&#x7B56;&#x7565;&#x4E09;&#xFF1A;element-diff"><b></b>&#x7B56;&#x7565;&#x4E09;&#xFF1A;element diff</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><b></b>&#x53C2;&#x8003;&#x8D44;&#x6599;</a></li></ul></ul></div><a href="#react-diff-&#x7B97;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="react-diff-&#x7B97;&#x6CD5;"><a name="react-diff-&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#react-diff-&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>React Diff &#x7B97;&#x6CD5;</h1>
 <p>&#x4F20;&#x7EDF;&#x7684; diff &#x7B97;&#x6CD5;&#x4F1A;&#x5BF9;&#x4E24;&#x9897;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x627E;&#x51FA;&#x5176;&#x4E2D;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x627E;&#x5230;&#x5DEE;&#x5F02;&#x540E;&#x8FD8;&#x8981;&#x8BA1;&#x7B97;&#x6700;&#x5C0F;&#x8F6C;&#x6362;&#x65B9;&#x5F0F;&#xFF0C;&#x6700;&#x7EC8;&#x8FBE;&#x5230;&#x7684;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n^3)&#xFF0C;&#x5176;&#x4E2D; n &#x4EE3;&#x8868;&#x8282;&#x70B9;&#x4E2A;&#x6570;&#xFF0C;1000 &#x4E2A;&#x8282;&#x70B9;&#x5C31;&#x9700;&#x8981; 10 &#x5FC6;&#x6B21;&#x6BD4;&#x8F83;&#x3002;</p>
 <p>&#x90A3;&#x4E48; react &#x662F;&#x5982;&#x4F55;&#x505A;&#x5230;&#x5C06; O(n^3) &#x8F6C;&#x53D8;&#x6210; O(n) &#x7684;&#x5462;&#xFF1F;</p>
 <p>&#x9996;&#x5148;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF; DOM &#xFF1F;</p>
@@ -595,7 +591,7 @@
 <p>1&#x3001;&#x9875;&#x9762;&#x4E2D;&#x53D1;&#x751F;&#x8DE8;&#x5C42;&#x7EA7;&#x7684; DOM &#x8282;&#x70B9;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x9891;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#x3002;&#xFF08;tree diff&#xFF09;</p>
 <p>2&#x3001;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x4F1A;&#x4EA7;&#x751F;&#x76F8;&#x4F3C;&#x7684;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x4F1A;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x3002;&#xFF08;component diff&#xFF09;</p>
 <p>3&#x3001;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x5C42;&#x7EA7;&#x7684;&#x4E00;&#x7EC4;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x552F;&#x4E00; key &#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;&#xFF08;element diff&#xFF09;</p>
-<h2 id="&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree-diff">&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree diff</h2>
+<h2 id="&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree-diff"><a name="&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree-diff" class="anchor-navigation-ex-anchor" href="#&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree-diff"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B56;&#x7565;&#x4E00;&#xFF1A;tree diff</h2>
 <p>&#x9875;&#x9762;&#x4E2D;&#x53D1;&#x751F;&#x8DE8;&#x5C42;&#x7EA7;&#x7684; DOM &#x8282;&#x70B9;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x9891;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x4EC0;&#x4E48;&#x662F;&#x8DE8;&#x5C42;&#x7EA7;&#x7684; DOM &#x8282;&#x70B9;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x5462;&#xFF1F;&#x4F8B;&#x5982;&#x7236;&#x8282;&#x70B9; A &#x4E0B;&#x6709; B &#x548C; C &#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;B &#x548C; C &#x4E92;&#x4E3A;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x3002;&#x73B0;&#x5728;&#x5C06; B &#x8282;&#x70B9;&#x79FB;&#x52A8;&#x5230; C &#x8282;&#x70B9;&#x5185;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BA9; B &#x6210;&#x4E3A; C &#x7684;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#x5C31;&#x79F0;&#x4E3A;&#x8DE8;&#x5C42;&#x7EA7;&#x7684; DOM &#x8282;&#x70B9;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x3002;&#x56E0;&#x4E3A;&#x672C;&#x6765; B &#x548C; C &#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x5C42;&#xFF0C;&#x73B0;&#x5728; B &#x79FB;&#x52A8;&#x5230;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x5C42;&#xFF0C;&#x7684;&#x786E;&#x662F;&#x8DE8;&#x5C42;&#x79FB;&#x52A8;&#x4E86;&#x8282;&#x70B9;&#x3002;</p>
 <p>&#x7531;&#x4E8E;&#x771F;&#x5B9E;&#x573A;&#x666F;&#x4E2D;&#x8FD9;&#x7C7B;&#x64CD;&#x4F5C;&#x53D1;&#x751F;&#x7684;&#x9891;&#x7387;&#x4F4E;&#x5230;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#xFF0C;&#x56E0;&#x6B64; react &#x53EA;&#x8FDB;&#x884C;&#x4E86;&#x540C;&#x5C42;&#x6BD4;&#x8F83;&#x3002;</p>
@@ -607,13 +603,13 @@
 <p>&#x57FA;&#x4E8E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x7ED9;&#x51FA;&#x4EE5;&#x4E0B;&#x5EFA;&#x8BAE;&#xFF1A;</p>
 <p>1&#x3001;&#x5728;&#x5F00;&#x53D1;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x4FDD;&#x6301;&#x7A33;&#x5B9A;&#x7684; DOM &#x7ED3;&#x6784;&#x4F1A;&#x6709;&#x52A9;&#x4E8E;&#x6027;&#x80FD;&#x7684;&#x63D0;&#x5347;&#x3002;</p>
 <p>2&#x3001;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; CSS &#x9690;&#x85CF;&#x6216;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x771F;&#x7684;&#x79FB;&#x9664;&#x6216;&#x6DFB;&#x52A0; DOM &#x8282;&#x70B9;&#x3002;</p>
-<h2 id="&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component-diff">&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component diff</h2>
+<h2 id="&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component-diff"><a name="&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component-diff" class="anchor-navigation-ex-anchor" href="#&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component-diff"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B56;&#x7565;&#x4E8C;&#xFF1A;component diff</h2>
 <p>&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x4F1A;&#x4EA7;&#x751F;&#x76F8;&#x4F3C;&#x7684;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x7684;&#x4F1A;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x3002;</p>
 <p>&#x8FD9;&#x4E2A;&#x7B56;&#x7565;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F;</p>
 <p>&#x6BD4;&#x5982; A &#x8282;&#x70B9;&#x4E0B;&#x6709;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;&#x7684;&#x8282;&#x70B9; B&#xFF0C;&#x5BF9;&#x6BD4;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x73B0; A &#x4E0B;&#x7684;&#x8282;&#x70B9;&#x8FD8;&#x662F;&#x7EC4;&#x4EF6; B &#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x6309;&#x7167;&#x539F;&#x7B56;&#x7565;&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x865A;&#x62DF; DOM &#x6811;&#x3002;&#x5982;&#x679C;&#x53D1;&#x73B0; A &#x4E0B;&#x7684;&#x8282;&#x70B9;&#x66F4;&#x6539;&#x4E3A;&#x7EC4;&#x4EF6; C &#x7684;&#x8BDD;&#x3002;&#x8FD9;&#x65F6;&#x5C31;&#x4F1A;&#x5148;&#x5220;&#x9664;&#x7EC4;&#x4EF6; B&#xFF0C;&#x518D;&#x521B;&#x5EFA;&#x7EC4;&#x4EF6; C</p>
 <p>&#x5728; tree diff &#x4E2D;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x6837;&#x521B;&#x5EFA;&#x4E00;&#x6574;&#x4E2A;&#x8282;&#x70B9;&#x6811;&#xFF0C;&#x662F;&#x4F1A;&#x5F71;&#x54CD; react &#x6027;&#x80FD;&#x7684;&#x3002;&#x4F46;&#x7531;&#x4E8E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7EC4;&#x4EF6;&#x662F;&#x5F88;&#x5C11;&#x5B58;&#x5728;&#x76F8;&#x4F3C; DOM &#x6811;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x79CD;&#x6781;&#x7AEF;&#x56E0;&#x7D20;&#x5F88;&#x96BE;&#x5728;&#x73B0;&#x5B9E;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x9020;&#x6210;&#x91CD;&#x5927;&#x5F71;&#x54CD;&#x7684;&#x3002;</p>
 <p>&#x6709;&#x65F6;&#x5019;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x7C7B;&#x578B;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x865A;&#x62DF; DOM &#x53EF;&#x80FD;&#x5E76;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x4EFB;&#x4F55;&#x53D8;&#x5316;&#x3002;&#x5982;&#x679C;&#x80FD;&#x591F;&#x786E;&#x5207;&#x77E5;&#x9053;&#x8FD9;&#x70B9;&#x90A3;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x5927;&#x91CF;&#x7684; diff &#x8FD0;&#x7B97;&#x65F6;&#x95F4;&#xFF0C;&#x56E0;&#x6B64; react &#x63D0;&#x4F9B; shouldComponentUpdate &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981; diff </p>
-<h2 id="&#x7B56;&#x7565;&#x4E09;&#xFF1A;element-diff">&#x7B56;&#x7565;&#x4E09;&#xFF1A;element diff</h2>
+<h2 id="&#x7B56;&#x7565;&#x4E09;&#xFF1A;element-diff"><a name="&#x7B56;&#x7565;&#x4E09;&#xFF1A;element-diff" class="anchor-navigation-ex-anchor" href="#&#x7B56;&#x7565;&#x4E09;&#xFF1A;element-diff"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B56;&#x7565;&#x4E09;&#xFF1A;element diff</h2>
 <p>&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x5C42;&#x7EA7;&#x7684;&#x4E00;&#x7EC4;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x552F;&#x4E00; key &#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;</p>
 <p>&#x8FD9;&#x4E2A; key &#x5C31;&#x662F; react &#x7ECF;&#x5E38;&#x62A5;&#x7684;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#xFF0C;&#x7F3A;&#x5C11; unique key&#xFF0C;&#x5728;&#x6E32;&#x67D3;&#x5217;&#x8868;&#x65F6;&#x7ECF;&#x5E38;&#x9047;&#x5230;&#x3002;</p>
 <p>&#x90A3; react &#x8BA9;&#x6211;&#x4EEC;&#x52A0;&#x8FD9;&#x4E2A; key &#x7684;&#x539F;&#x56E0;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
@@ -628,13 +624,15 @@
 <p>&#x57FA;&#x4E8E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x7ED9;&#x51FA;&#x4EE5;&#x4E0B;&#x5EFA;&#x8BAE;&#xFF1A;</p>
 <p>1&#x3001;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x7C7B;&#x4F3C;&#x5C06;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x79FB;&#x52A8;&#x5230;&#x5217;&#x8868;&#x9996;&#x90E8;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
 <p>2&#x3001;&#x56E0;&#x4E3A;&#x5F53;&#x8282;&#x70B9;&#x6570;&#x91CF;&#x8FC7;&#x5927;&#x6216;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x8FC7;&#x4E8E;&#x9891;&#x7E41;&#x65F6;&#xFF0C;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4F1A;&#x5F71;&#x54CD; React &#x7684;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="&#x53C2;&#x8003;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
 <p><a href="https://zhuanlan.zhihu.com/p/20346379?refer=purerender" target="_blank">React &#x6E90;&#x7801;&#x5256;&#x6790;&#x7CFB;&#x5217; &#xFF0D; &#x4E0D;&#x53EF;&#x601D;&#x8BAE;&#x7684; react diff</a></p>
 <p><a href="https://segmentfault.com/a/1190000016539430?utm_source=tag-newest" target="_blank">&#x8C08;&#x8C08;React&#x4E2D;Diff&#x7B97;&#x6CD5;&#x7684;&#x7B56;&#x7565;&#x53CA;&#x5B9E;&#x73B0;</a></p>
 <p><a href="https://www.jianshu.com/p/398e63dc1969" target="_blank">&#x4F20;&#x7EDF;diff&#x3001;react&#x4F18;&#x5316;diff&#x3001;vue&#x4F18;&#x5316;diff</a></p>
 <p><a href="https://segmentfault.com/a/1190000010686582#articleHeader3" target="_blank">React&#x6E90;&#x7801;&#x4E4B;Diff&#x7B97;&#x6CD5;</a></p>
-<p><a href="https://zh-hans.reactjs.org/docs/reconciliation.html" target="_blank">react &#x5B98;&#x65B9; diff &#x6587;&#x6863;</a></p>
-
+<p><a href="https://zh-hans.reactjs.org/docs/reconciliation.html" target="_blank">react &#x5B98;&#x65B9; diff &#x6587;&#x6863;</a> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; yaozhongnan All Right Reserved  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-08-19 09:37:12
+</span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -678,7 +676,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React Diff 算法","level":"1.5.3","depth":2,"next":{"title":"React 源码解读","level":"1.5.4","depth":2,"path":"notes/react/React 源码解读.md","ref":"notes/react/React 源码解读.md","articles":[]},"previous":{"title":"React-Component","level":"1.5.2","depth":2,"path":"notes/react/React-Component.md","ref":"notes/react/React-Component.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","expandable-chapters-small","insert-logo","chapter-fold","code","github","advanced-emoji","splitter","page-toc-button","pageview-count","popup"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/yaozhongnan/note"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"images/logo.jpg"}},"theme":"default","author":"yaozhongnan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note","language":"zh-hans","gitbook":"*","description":"a study note for myself"},"file":{"path":"notes/react/React Diff 算法.md","mtime":"2019-08-19T01:37:12.443Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-21T07:17:52.865Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React Diff 算法","level":"1.5.3","depth":2,"next":{"title":"React 源码解读","level":"1.5.4","depth":2,"path":"notes/react/React 源码解读.md","ref":"notes/react/React 源码解读.md","articles":[]},"previous":{"title":"React-Component","level":"1.5.2","depth":2,"path":"notes/react/React-Component.md","ref":"notes/react/React-Component.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","insert-logo","chapter-fold","code","github","advanced-emoji","splitter","ancre-navigation","pageview-count","popup","hide-element","custom-favicon","tbfed-pagefooter"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © yaozhongnan All Right Reserved ","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/yaozhongnan/note"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"/images/favicon.ico","pageview-count":{},"custom-favicon":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"/images/logo.jpg"}},"theme":"default","author":"yaozhongnan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note","language":"zh-hans","gitbook":"*","description":"a study note for myself"},"file":{"path":"notes/react/React Diff 算法.md","mtime":"2019-08-19T01:37:12.443Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-21T08:11:30.698Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -693,14 +691,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
         
     
         
@@ -724,11 +714,11 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
         
     
         
