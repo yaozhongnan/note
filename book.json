@@ -11,7 +11,6 @@
     "-search",
     "search-pro",
     "insert-logo",
-    "chapter-fold",
     "code",
     "github",
     "advanced-emoji",
@@ -25,7 +24,7 @@
   ],
   "pluginsConfig": {
     "insert-logo": {
-      "url": "/images/logo.jpg",
+      "url": "./images/logo.jpg",
       "style": "background: none; max-height: 30px; min-height: 30px"
     },
     "github": {
@@ -34,7 +33,7 @@
 	"hide-element": {
 		"elements": [".gitbook-link"]
 	},
-	"favicon": "/images/favicon.ico",
+	"favicon": "./images/favicon.ico",
 	"tbfed-pagefooter": {
 		"copyright":"Copyright © yaozhongnan All Right Reserved ",
 		"modify_label": "该文章修订时间：",
