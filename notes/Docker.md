@@ -34,6 +34,34 @@ docker commit -a '作者' -c(使用 DockerFile) -m 'commit 说明' -p(提交时�
 
 
 
+删除镜像（image）
+
+```bash
+docker rmi {仓库}:{标签名}
+
+docker rmi {镜像 ID}
+```
+
+
+
+查看卷
+
+```bash
+docker volume ls
+```
+
+
+
+删除卷
+
+```bash
+docker volume rm {卷名}
+```
+
+
+
+
+
 ## 参考文档
 
 + [Docker — 从入门到实践](https://www.yuque.com/grasilife/docker)
