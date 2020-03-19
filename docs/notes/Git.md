@@ -98,6 +98,15 @@ git push -f origin master
 
 
 
+合并某次提交到当前分支
+
+```bash
+# cherry-pick 后跟 commit id
+git cherry-pick 0128660c08e325d410cb845616af355c0c19c6fe
+```
+
+
+
 ## git pull
 
 `git pull`命令的作用是：取回远程主机某个分支的更新，再与本地的指定分支合并。

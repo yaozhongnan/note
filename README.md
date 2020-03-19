@@ -33,7 +33,6 @@ Github：<https://github.com/yaozhongnan/note>
 + Mysql
   + [MySQL-mysql 8.0.11安装教程](<https://www.cnblogs.com/laumians-notes/p/9069498.html>)
   + [MySQL数据库查询指令大全](<https://www.2cto.com/database/201803/731470.html>)
-  + 
 
 ## commit
 
