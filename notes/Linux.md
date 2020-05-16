@@ -248,6 +248,48 @@ sudo n use 12.16.1 test.js
 
 
 
+## ubuntu 之更改镜像源和语言
+
+更改镜像源
+
+```bash
+# 进入目录
+cd /etc/apt
+
+# 备份原文件
+sudo cp sources.list sources.list.default
+
+# 修改当前文件内容，内容从 https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/ 获取
+sudo vi sources.list
+
+# 更新源
+sudo apt-get update
+```
+
+
+
+更改语言
+
+https://blog.csdn.net/qq_19339041/article/details/80058575
+
+
+
+## ubuntu 之更改输入法
+
+最简单的方式：https://www.jianshu.com/p/750963a689fb
+
+
+
+安装搜狗输入法
+
+```bash
+
+```
+
+
+
+
+
 ## 问题
 
 **<u>关于 Ubuntu 中 Could not get lock /var/lib/dpkg/lock 解决方案</u>**

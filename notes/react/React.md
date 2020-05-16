@@ -143,6 +143,8 @@ class MyComponent extends React.PureComponent {
 
 > 注：PureComponent 需要依靠 class 创建的组件才可以使用
 
+参考：https://www.jianshu.com/p/c41bbbc20e65
+
 
 
 ## React.memo()

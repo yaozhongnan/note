@@ -283,3 +283,42 @@ symbolic-links=0
 
 default_authentication_plugin= mysql_native_password
 ```
+
+
+
+## Dockerfile
+
+问答项目：根目录下新建 Dockerfile 文件
+
+```bash
+# 这里先用 node 作为基础镜像，主要使用 npm 打包。
+# AS frontend 很关键，因为后面使用了第二个 FROM，会覆盖掉第一个 FROM。
+# 所以通过 frontend 可以让后面的对它进行引用
+FROM node AS frontend
+
+# 进入工作目录，设 /usr/src/wd-app 为我们的工作目录
+# 注意 /usr/src/wd-app 中的文件夹如果容器内没有的话会自动创建
+WORKDIR /usr/src/wd-app
+
+# 拷贝上下文中的目录文件到工作目录内，这里就是将上下文呢的文件拷贝进了 /usr/src/wd-app 里
+COPY ./ ./
+
+# 然后安装依赖并打包
+RUN npm i --registry=https://registry.npm.taobao.org
+RUN npm run build
+
+# 这里又把 tomcat 作为了基础镜像，那么上面的 node 镜像就没有了
+FROM tomcat
+
+# 设置工作目录
+WORKDIR /usr/local/tomcat/webapps/ROOT
+
+# 注意这里拷贝使用了 --from=frontend 如果没有这个的话它是找不到 /usr/src/wd-app/dist/ 目录的
+# 因为第二个 FROM 让它把基础镜像变成了 tomcat，也就是容器已经变成了 tomcat 了。
+# 那么想要获取上一个镜像容器内的文件，就得通过 --from 进行引用
+# 这里是把之前打包的 dist 文件夹中的文件拷贝到了 /usr/local/tomcat/webapps/ROOT 内
+COPY --from=frontend /usr/src/wd-app/dist/ ./
+
+EXPOSE 8080
+```
+
