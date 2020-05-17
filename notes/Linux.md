@@ -302,3 +302,5 @@ sudo rm /var/lib/dpkg/lock
 sudo rm /var/lib/dpkg/lock-frontend
 ```
 
+https://blog.csdn.net/qq_42881421/article/details/92016553
+
