@@ -499,3 +499,23 @@ $ git stash pop
 # 生成一个可供发布的压缩包
 $ git archive
 ```
+
+```js
+git commit提交文件，服务器返回本地文件有修改。
+
+1、git stash :暂存本地代码
+
+2、git pull origin develop : 获取远程分支代码
+
+3、git stash pop:恢复之前暂存的文件
+
+ 
+
+git 误删文件和恢复指令
+
+1、git  fsck --lost -found :查看最近移除的文件.
+
+2、git show  '误删编号'：查看删除文件内容
+
+3、git merge ‘误删编号’： 本地合并误删的文件内容
+```
