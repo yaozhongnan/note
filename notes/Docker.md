@@ -322,3 +322,16 @@ COPY --from=frontend /usr/src/wd-app/dist/ ./
 EXPOSE 8080
 ```
 
+## 推送镜像到 Docker Hub
+
+```bash
+# 登录
+sudo docker login
+
+# 打标签
+sudo docker tag [imageid] xxx/xxx:tag
+
+# 推送，前提在 docker hub 上已经建好了 xxx/xxx 仓库
+sudo docker push xxx/xxx:tag
+```
+
