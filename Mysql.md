@@ -1,5 +1,7 @@
 # Mysql
 
+Windows 安装：https://www.cnblogs.com/laumians-notes/p/9069498.html
+Ubuntu 安装：https://blog.csdn.net/weixx3/article/details/94133847
 
 
 ## 版本
