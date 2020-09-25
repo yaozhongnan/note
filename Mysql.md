@@ -3,6 +3,14 @@
 Windows 安装：https://www.cnblogs.com/laumians-notes/p/9069498.html
 Ubuntu 安装：https://blog.csdn.net/weixx3/article/details/94133847
 
+一些设置：
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';
+
+CREATE USER 'xxh'@'%' IDENTIFIED WITH mysql_native_password BY 'xxh123!@#';
+
+flush privileges;
+
 
 ## 版本
 
