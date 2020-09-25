@@ -1,9 +1,3 @@
-## Introduction
-
-前端笔记，[GitBook 在线阅读](https://yaozhongnan.github.io/note/)
-
-Github：<https://github.com/yaozhongnan/note>
-
 ## 其它阅读
 
 + [「2019 JSConf.Asia - 尤雨溪」在框架设计中寻求平衡](<https://zhuanlan.zhihu.com/p/76622839>)
@@ -34,15 +28,4 @@ Github：<https://github.com/yaozhongnan/note>
   + [MySQL-mysql 8.0.11安装教程](<https://www.cnblogs.com/laumians-notes/p/9069498.html>)
   + [MySQL数据库查询指令大全](<https://www.2cto.com/database/201803/731470.html>)
 
-## commit
-
-```shell
-gitbook build ./ ./docs
-
-git add .
-
-git commit -m 'messages'
-
-git push
-```
 
